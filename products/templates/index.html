@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block phone %}
+          {% for pwares_contacts in pwarescontacts %}
+					<h2>{{ pwares_contacts.phone_numbera }}</h2><h2>{{ pwares_contacts.phone_numberb }}</h2>
+          {% endfor %}
+{% endblock %}
+
+{% block mail %}
+          {% for pwares_contacts in pwarescontacts %}
+					<a href="mailto:{{ pwares_contacts.email_address }}"><h3>{{ pwares_contacts.email_address }}</h3></a>
+          {% endfor %}
+{% endblock %}
+
+{% block about %}
+      {% for about_pwares in aboutpwares %}
+			<h6>{{ about_pwares.abouthistory }}</h6>
+			<div class="col-md-4 hi-icon-effect-6 agile1">
+				<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+				<h4>{{ about_pwares.titlea }}</h4>
+				<p>{{ about_pwares.descriptiona }}</p>
+			</div>
+			<div class="col-md-4 agile2">
+				<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+				<h4>{{ about_pwares.titleb }}</h4>
+				<p>{{ about_pwares.descriptionb }}</p>
+			</div>
+			<div class="col-md-4 agile3">
+				<span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+				<h4>{{ about_pwares.titlec }}</h4>
+				<p>{{ about_pwares.descriptionc }}</p>
+			</div>
+      {% endfor %}
+{% endblock %}
+
+{% block rate %}
+      {% for pwares_ratings in pwaresrating %}
+			<div class="col-md-3 agile_count_grid">
+				<div class="agile_count_grid_left">
+					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">{{ pwares_ratings.creativedesign }}</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h3>Creative Design</h3>
+			</div>
+			<div class="col-md-3 agile_count_grid">
+				<div class="agile_count_grid_left">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">{{ pwares_ratings.happyclients }}</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h3>Happy Clients</h3>
+			</div>
+			<div class="col-md-3 agile_count_grid">
+				<div class="agile_count_grid_left">
+					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">{{ pwares_ratings.peopleloved }}</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h3>People Loved</h3>
+			</div>
+			<div class="col-md-3 agile_count_grid">
+				<div class="agile_count_grid_left">
+					<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">{{ pwares_ratings.saveincome }}</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h3>Saved Income</h3>
+			</div>
+			<div class="clearfix"> </div>
+				<!-- Starts-Number-Scroller-Animation-JavaScript -->
+					<script src="{% static 'js/waypoints.min.js' %}"></script>
+					<script src="{% static 'js/counterup.min.js' %}"></script>
+					<script>
+						jQuery(document).ready(function( $ ) {
+							$('.counter').counterUp({
+								delay: 20,
+								time: 1000
+							});
+						});
+					</script>
+				<!-- //Starts-Number-Scroller-Animation-JavaScript -->
+        {% endfor %}
+{% endblock %}
+
+{% block service %}
+      {% for pwares_services in pwaresservices %}
+			<h6>{{ pwares_services.servicehistory }}</h6>
+			<div class="service-content">
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+				<h4>{{ pwares_services.serviceone }}</h4>
+				<p>{{ pwares_services.serviceone_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-eject" aria-hidden="true"></span>
+				<h4>{{ pwares_services.servicetwo }}</h4>
+				<p>{{ pwares_services.servicetwo_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
+				<h4>{{ pwares_services.servicethree }}</h4>
+				<p>{{ pwares_services.servicethree_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+				<h4>{{ pwares_services.servicefour }}</h4>
+				<p>{{ pwares_services.servicefour_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+				<h4>{{ pwares_services.servicefive }}</h4>
+				<p>{{ pwares_services.servicefive_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+				<h4>{{ pwares_services.servicesix }}</h4>
+				<p>{{ pwares_services.servicesix_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+				<h4>{{ pwares_services.serviceseven }}</h4>
+				<p>{{ pwares_services.serviceseven_info }}</p>
+			</div>
+			<div class="col-md-3 service-grids-w3">
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<h4>{{ pwares_services.serviceeight }}</h4>
+				<p>{{ pwares_services.serviceeight_info }}</p>
+			</div>
+			<div class="clearfix"></div>
+			</div>
+      {% endfor %}
+{% endblock %}
+
+{% block port %}
+			<div class="container">
+				<h3>Portfolio</h3>
+        <label class="line"></label>
+        {% for pwares_portfolio in pwaresportfolio %}
+				<h6>{{ pwares_portfolio.portfoliohistory }}</h6>
+			</div>
+			<div class="gallery-info">
+				<div class="col-md-6 gallery-grids glry-grid1">
+					<div class="gallery-grids-top">
+						<a class="b-link-stripe b-animate-go wow zoomIn animated" data-wow-delay=".5s" href="{{ pwares_portfolio.photo.url }}" data-lightbox="example-set" data-title="{{ pwares_portfolio.description }}">
+							<img src="{{ pwares_portfolio.photo.url }}" class="img-responsive" alt=""/>
+							<div class="b-wrapper">
+								<span class="b-animate b-from-left">
+									<img class="img-responsive" src="{% static 'images/e.png' %}" alt=""/>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+				<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"> </script>
+			</div>
+      {% endfor %}
+{% endblock %}
+
+{% block test %}
+			<h3>Testimonials</h3>
+			<label class="line"></label>
+			<h4>What Our Clients Say</h4>
+			<section class="slider">
+        {% for pwares_testimonials in pwarestestimonials %}
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<img src="{{ pwares_testimonials.photo.url }}" alt="" />
+								<p>{{ pwares_testimonials.clienttext }}</p>
+								<div class="client">
+									<h5>{{ pwares_testimonials.clientname  }}</h5>
+                  <h6><i>{{ pwares_testimonials.clienttitle }}</i></h6>
+								</div>
+						</li>
+					</ul>
+				</div>
+        {% endfor %}
+			</section>
+{% endblock %}
+
+{% block update %}
+			<h3>Site Updates</h3>
+			<label class="line"></label>
+      {% for pwares_updates in pwaresupdates %}
+			<h6>{{ pwares_updates.about_updates }}</h6>
+			<div class="w3_blog_grids">
+				<div class="col-md-6 w3_blog_grid blog-grid1">
+					<div class="col-md-6 w3_blog_grid_left">
+						<a href="#"><img src="{{ pwares_updates.photo.url }}" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="col-md-6 w3_blog_grid_right">
+						<h4><a href="#">{{ pwares_updates.update_title }}</a></h4>
+						<h5>{{ pwares_updates.update_source }}</h5>
+						<p>{{ pwares_updates.update_info }}</p>
+						<ul>
+							<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{{ pwares_updates.published_date }}</li>
+
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+      {% endfor %}
+{% endblock %}
+
+{% block contact %}
+			<h3>Contact Info</h3>
+      <label class="line"></label>
+      {% for pwares_contacts in pwarescontacts %}
+			<h6>{{ pwares_contacts.about_ourcontacts }}</h6>
+			<div class="col-md-6 contact-left">
+				<form action="#" method="post">
+					<div class="col-md-6">
+					<h4>YOUR NAME</h4>
+					<input type="text"  class="name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					</div>
+					<div class="col-md-6">
+					<h4>YOUR EMAIL</h4>
+					<input type="text"  name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-12">
+					<h4>MESSAGE</h4>
+					<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required=""></textarea>
+					</div>
+					<input type="submit" value="Send">
+				</form>
+			</div>
+			<div class="col-md-6 contact-right">
+				<h5>To contact us please use the contact form visible</h5>
+				<h5>phone:<span class="dark">{{ pwares_contacts.phone_numbera }}</span><br/><span class="dark" style="margin-left:53px;">{{ pwares_contacts.phone_numberb }}</span></h5>
+				<h5>Email:<span class="dark"><a href="mailto:{{ pwares_contacts.email_address }}">{{ pwares_contacts.email_address }}</a></span></h5>
+				<ul>
+					<li><a class="linkedin" href="{{ pwares_contacts.linkedin_link }}"></a></li>
+					<li><a class="google" href="{{ pwares_contacts.google_link }}"></a></li>
+					<li><a class="twitter" href="{{ pwares_contacts.twitter_link }}"></a></li>
+					<li><a class="facebook" href="{{ pwares_contacts.facebook_link }}"></a></li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+      {% endfor %}
+{% endblock %}
+
+{% block informer %}
+      {% for pwares_contacts in pwarescontacts %}
+			<a href="#banner" class="scroll"><img src="images/to-top.png" alt="" /></a>
+			<p> &copy; {{ pwares_contacts.current_year }} pwares. All Rights Reserved | Design by <a href="#">pwares</a></p>
+      {% endfor %}
+{% endblock %}
